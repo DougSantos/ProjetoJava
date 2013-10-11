@@ -11,26 +11,12 @@ package mercadinho.ClassesBasicas;
  */
 public class Endereco {
     
-    private String Rua;
     private String Bairro;
     private String Cidade;
     private String Numero;
     private String Logradouro;
     private String cep;
 
-    /**
-     * @return the Rua
-     */
-    public String getRua() {
-        return Rua;
-    }
-
-    /**
-     * @param Rua the Rua to set
-     */
-    public void setRua(String Rua) {
-        this.Rua = Rua;
-    }
 
     /**
      * @return the Bairro

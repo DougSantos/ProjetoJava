@@ -26,7 +26,7 @@ public class DadosFuncionario {
             Statement conex = banco.conectar();
             String sql = "insert into Funcionario values";
             sql += "('" + s.getMatricula() + "','" + s.getNome() + "','" + s.getCpf() + "','" + s.getRG() + "','" + s.getEndfun().getBairro() + "'";
-            sql += ",'" + s.getEndfun().getCep() + "', '" + s.getEndfun().getCidade() + "', '" + s.getEndfun().getLogradouro() + "', '" + s.getEndfun().getRua() + "'";
+            sql += ",'" + s.getEndfun().getCep() + "', '" + s.getEndfun().getCidade() + "', '" + s.getEndfun().getLogradouro() + "'";
             conex.execute(sql);
 
         } catch (Exception ex) {
