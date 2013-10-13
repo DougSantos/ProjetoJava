@@ -5,7 +5,6 @@
  */
 package mercadinho.Dados;
 
-import java.sql.SQLException;
 import java.sql.Statement;
 import mercadinho.CamandaBanco;
 import mercadinho.ClassesBasicas.Funcionario;
