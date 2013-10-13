@@ -8,8 +8,6 @@ package mercadinho.Dados;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import mercadinho.CamandaBanco;
 import mercadinho.ClassesBasicas.Cliente;
 import mercadinho.ClassesBasicas.ClienteException;
@@ -48,7 +46,7 @@ public class DadosCliente {
     public void removerCliente(String cpf) throws ClienteException {
         try {
             this.conex = this.banco.conectar();
-            sql = "DELETE FROM clientes WHERE matricula = " + cpf + ";";
+            sql = "DELETE FROM clientes WHERE cpf = " + cpf + ";";
             conex.executeQuery(sql);
         } catch (ClassNotFoundException ex) {
             throw new ClienteException(ex.getMessage());
@@ -114,10 +112,8 @@ public class DadosCliente {
             throw new ClienteException(ex.getMessage());
         } finally {
             try {
-                banco.conectar();
-            } catch (ClassNotFoundException ex) {
-                throw new ClienteException(ex.getMessage());
-            } catch (SQLException ex) {
+                banco.desconectar();
+            } catch (Exception ex) {
                 throw new ClienteException(ex.getMessage());
             }
         }
