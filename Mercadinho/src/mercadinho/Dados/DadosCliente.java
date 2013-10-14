@@ -81,7 +81,7 @@ public class DadosCliente {
                 conex.executeQuery(sql);
             }
             if (Comparador.getRG().equals(c.getRG()) == false) {
-                sql = "UPDATE funcionarios SET rg = '" + c.getNome() + "' WHERE cpf = " + c.getCpf() + ";";
+                sql = "UPDATE funcionarios SET rg = '" + c.getRG + "' WHERE cpf = " + c.getCpf() + ";";
                 conex.executeQuery(sql);
             }
             if (Comparador.getEndcli().getBairro().equals(c.getEndcli().getBairro()) == false) {
